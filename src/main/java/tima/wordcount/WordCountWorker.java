@@ -51,7 +51,7 @@ public class WordCountWorker extends Thread{
 
 	@Override
 	public void run() {
-		while (!isInterrupted()){
+		while (true){
 			try{
 				String file = queue.take();
 				process(file);
@@ -62,7 +62,7 @@ public class WordCountWorker extends Thread{
 
 			if(isProcessDone) {
 				System.out.println("kill thread " + Thread.currentThread().getName());
-				interrupt();
+				break;
 			}
 		}
 
