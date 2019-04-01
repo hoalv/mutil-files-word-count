@@ -118,6 +118,7 @@ public class WordCountWorker extends Thread{
 	}
 
 	private void countWords(String buffer){
+//	    buffer.replaceAll("\\.", "");
 		for(String word: buffer.split("\\s+|\\t+|,|;|\\.|:")){
 			word = word.replaceFirst("[^\\p{L}]*", "");
 			word = new StringBuffer(word).reverse().toString();
