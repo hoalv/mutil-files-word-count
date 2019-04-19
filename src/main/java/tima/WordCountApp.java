@@ -65,6 +65,8 @@ public class WordCountApp {
             System.out.println(strWord);
         }
 
+        System.out.println("run done!!!!!!!!!!!");
+
         //log word count
         /*int total = 0;
         for (Map.Entry<String, Integer> entry : wordCountMap.entrySet()) {
